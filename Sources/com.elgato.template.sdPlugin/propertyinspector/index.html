@@ -23,21 +23,30 @@
           -->
 
             <div class="sdpi-item">
-                <div class="sdpi-item-label">Name</div>
-                <input id="mynameinput" class="sdpi-item-value" type="text" value="" />
+                <div class="sdpi-item-label">Webhook URL</div>
+                <input id="webhookUrl" class="sdpi-item-value inspector" type="text" value="https://" />
              </div>
 
+            <div class="sdpi-item" id="select_single">
+                <div class="sdpi-item-label">Method</div>
+                <select class="sdpi-item-value select  inspector" id="webhookMethod">
+                    <option value="GET">GET</option>
+                    <option value="POST">POST</option>
+                </select>
+            </div>
+
             <div type="textarea" class="sdpi-item">
-                <div class="sdpi-item-label up20" data-localize="Message">Message</div>
+                <div class="sdpi-item-label up20" data-localize="Message">Webhook Payload</div>
                 <div class="sdpi-item-value textarea">
-                  <textarea type="textarea" maxlength="50" id="mymessage" class="three-lines"></textarea>
-                  <label for="mymessage">0/50</label>
+                  <textarea type="textarea" maxlength="500" id="webhookPayload" class="three-lines  inspector">{}</textarea>
+                  <label for="webhookPayload">0/500</label>
                 </div>
               </div>
 
+
               <div class="sdpi-item">
-                <div class="sdpi-item-label">Button</div>
-                <button class="sdpi-item-value" id="clickme" value="Click Me" data-localize="Click me">Click Me</button>
+                <div class="sdpi-item-label">Are you done?</div>
+                <button class="sdpi-item-value" id="save" data-localize="Save" onclick="save()">Save</button>
               </div>
 
 
